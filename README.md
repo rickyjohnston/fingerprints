@@ -2,6 +2,12 @@
 
 Keep track of which Admins touch your Laravel Eloquent models.
 
+## Installation
+
+via composer:
+
+```composer require rickyjohnston/fingerprints```
+
 ## Usage
 
 This package provides a new abstract class for your model to extend. Swap out `Model` for `TrackableModel`.
