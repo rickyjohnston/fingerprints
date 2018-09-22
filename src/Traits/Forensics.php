@@ -9,7 +9,7 @@ trait Forensics
      */
     public function creator()
     {
-        return $this->hasOne(\App\User::class, 'id', 'created_by');
+        return $this->hasOne(config('fingerprints.model'), 'id', 'created_by');
     }
 
     /**
@@ -17,6 +17,6 @@ trait Forensics
      */
     public function updater()
     {
-        return $this->hasOne(\App\User::class, 'id', 'updated_by');
+        return $this->hasOne(config('fingerprints.model'), 'id', 'updated_by');
     }
 }
