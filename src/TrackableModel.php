@@ -2,13 +2,15 @@
 
 namespace RickyJohnston\Fingerprints;
 
-use App\User;
 use Illuminate\Database\Eloquent\Model;
 use RickyJohnston\Fingerprints\Events\ModelCreated;
 use RickyJohnston\Fingerprints\Events\ModelUpdated;
+use RickyJohnston\Fingerprints\Traits\Forensics;
 
 abstract class TrackableModel extends Model
 {
+    use Forensics;
+
     /**
      * The event map for the model.
      *
@@ -18,14 +20,4 @@ abstract class TrackableModel extends Model
         'created' => ModelCreated::class,
         'updated' => ModelUpdated::class,
     ];
-
-    public function creator()
-    {
-        return $this->hasOne(User::class, 'id', 'created_by');
-    }
-
-    public function updater()
-    {
-        return $this->hasOne(User::class, 'id', 'updated_by');
-    }
 }

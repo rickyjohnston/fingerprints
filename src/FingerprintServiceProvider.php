@@ -15,6 +15,10 @@ class FingerprintServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->addMigrationMacros();
+
+        $this->publishes([
+            __DIR__ . '/../config/fingerprints.php' => config_path('fingerprints.php'),
+        ], 'config');
     }
 
     /**
