@@ -1,0 +1,40 @@
+{
+    "name": "richardjohnston/fingerprints",
+    "description": "Make your admins leave their fingerprints all over Eloquent Model changes",
+    "keywords": ["laravel", "fingerprints"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/rickyjohnston/fingerprints/issues",
+        "source": "https://github.com/rickyjohnston/fingerprints"
+    },
+    "authors": [
+        {
+            "name": "Ricky Johnston",
+            "email": "richardjohnston3@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "illuminate/contracts": "~5.6|~5.7",
+        "illuminate/database": "~5.6|~5.7",
+        "illuminate/queue": "~5.6|~5.7",
+        "illuminate/support": "~5.6|~5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "RickyJohnston\\Fingerprints\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RickyJohnston\\Fingerprints\\FingerprintServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
